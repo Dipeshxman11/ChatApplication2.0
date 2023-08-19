@@ -21,8 +21,8 @@ function login() {
         loginPassword: loginPassword.value,
     }
 
-    axios
-        .post("http://localhost:4000/user/login", loginDetails)
+   
+    axios.post("http://localhost:4000/user/login", loginDetails)
         .then((result) => {
             alert(result.data.message);
             localStorage.setItem("token", result.data.token);
